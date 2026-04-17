@@ -17,3 +17,4 @@ function ColorToogle() {
         </div>
     )
 }
+export default ColorToogle;
