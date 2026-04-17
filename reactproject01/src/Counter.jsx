@@ -5,11 +5,13 @@ function Counter() {
     //let counter = 15
 
     const AddValue = () => {
-        setCounter(counter + 1)
+        if(counter<20){
+        setCounter(counter + 1)}
 
     }
     const RemoveValue = () => {
-        setCounter(counter-1)
+        if(counter>0){
+        setCounter(counter-1)}
 
     }
 
