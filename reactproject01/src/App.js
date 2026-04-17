@@ -1,11 +1,13 @@
 
-import ColorToogle from './Color1';
+
+import Counter from './Counter';
 
 function App() {
   return (
-    <>
-    <ColorToogle/>
-    </>
+    
+    
+    <Counter/>
+    
   
   )
 }
