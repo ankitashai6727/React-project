@@ -33,7 +33,7 @@ function Counter() {
             padding: "20px",
             borderRadius: "10px",
             borderStyle:"none"
-        }} onClick={AddValue}> Add value</button>
+        }} onClick={AddValue}> Add value: {counter}</button>
         <br />
         <button 
         style={{color: "black",
@@ -41,7 +41,7 @@ function Counter() {
             padding: "20px",
             borderRadius: "10px",
             borderStyle:"none"}}
-         onClick={RemoveValue}> Remove Value</button>
+         onClick={RemoveValue}> Remove Value: {counter}</button>
     </div>
 
     )
