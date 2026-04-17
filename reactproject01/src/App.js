@@ -7,7 +7,7 @@ function App() {
     <>
     
    {/*<ColorToogle/>*/}
-    {/*<Counter/> */}
+    <Counter/> 
  
     
     
