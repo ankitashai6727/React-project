@@ -9,7 +9,7 @@ function App() {
     <Card channel="ankitashahi" btntext="Click me"/>
     <Card channel="aakash Singh" btntext="viteMe"/>*/}
     <BgColorChange/>
-    </>
+    </> 
   )
 }
 
