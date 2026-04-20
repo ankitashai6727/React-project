@@ -34,6 +34,6 @@ function BgColorChange(){
     </div>
 
   </div>
-    
+    )
 }
 export default BgColorChange
