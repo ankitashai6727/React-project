@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 function PasswordGen() {
     const [lenght, setLenght] = useState(4);
     const [allowNum, setAllowNum] = useState(false);
     const [allwedChar, setAllowChar] = useState(false);
     const [password, setPassword] = useState();
+    // useRef hook
+    const passwordRef=useRef(null)
     const passwordgenrator = useCallback(() => {
         let pass = ""
         let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -19,6 +21,12 @@ function PasswordGen() {
 
 
     }, [lenght, allwedChar, allowNum, setPassword])
+    const copypasswordToclipBorad=useCallback(()=>{
+        passwordRef.current?.select();
+        passwordRef.current?.setSelectionRange(0,100)
+        window.navigator.clipboard.writeText(password)
+
+    },[password])
     useEffect(()=>{passwordgenrator()},[length,allowNum,allwedChar,setPassword])
     return (
         <div className='w-full max-w-md mx-auto  rounded-lg
@@ -33,8 +41,10 @@ function PasswordGen() {
                     className="outline-none  w-full px-3 py-1"
                     placeholder="Password"
                     readOnly
+                    ref={passwordRef}
                 />
-                <button className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0
+                <button onClick={copypasswordToclipBorad}
+                 className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0
                  ">Copy</button>
 
 
