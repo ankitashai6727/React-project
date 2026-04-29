@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 
 import Home from './components/Home/Home';
@@ -26,10 +26,29 @@ element:<About/>
   {
     path:"Contact",
     element:<Contact/>
+  },
+  // {
+  //   path:"user/:id",
+  //   element:<User/>
+  // }
+  {
+    path:"Github",
+    element:<Github/>
   }
 ]
 }
 ])
+// const router=createBrowserRouter(
+//   createRoutesFromElements(
+//     <Router path='/' element={<Layout/>}>
+//     <Router path='' element={<Home/>}/>
+//     <Router path='About' element={<About/>}/>
+//     <Router path='Contact' element={<Contact/>}/>
+    
+
+//     </Router>
+//   )
+// )
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
